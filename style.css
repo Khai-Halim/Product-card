@@ -41,10 +41,11 @@
 .card {
   height: 30rem;
   width: 18rem;
+  box-shadow: 1px 1px 2px 1px grey;
 }
 
 .card > :nth-child(1) {
-  height: 50%;
+  height: 60%;
   background-image: url(images/product-2.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -52,6 +53,54 @@
 }
 
 .card > :nth-child(2) {
-  height: 50%;
+  height: 40%;
+}
+
+.card > :nth-child(2) .title {
+  font-family: sans-serif;
+  font-weight: 100;
+  padding: 0.6rem;
+}
+
+.card > :nth-child(2) .price {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0.6rem;
+}
+
+.card > :nth-child(2) .btn {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.6rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #eee;
+  background: blue;
+  border-radius: 4px;
+  user-select: none;
+  transition: transform 200ms ease-in, background 200ms ease-in , box-shadow 100ms linear;
+}
+
+.card > :nth-child(2) .btn::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(3, 96, 236, 0.637);
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.card > :nth-child(2) .btn:hover {
+  transform: scale(1.01, 1.01) translate(0, -1px);
+  box-shadow: 0 1px 2px -1px black;
+  background: rgba(0, 0, 255, 0);
 }
 /*# sourceMappingURL=style.css.map */

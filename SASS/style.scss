@@ -7,19 +7,67 @@
 .pd-top{padding-top: 1rem;}
 .pd-btm{padding-bottom: 1rem;}
 
+//Card
 .card{
     height: 30rem;
     width: 18rem;
-    
+    box-shadow: 1px 1px 2px 1px grey;
+
+    //Card Image
     >:nth-child(1){
-        height: 50%;
+        height: 60%;
         background-image: url(images/product-2.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: 12rem;
     }
+
+    //Card Info
     >:nth-child(2){
-        height: 50%; 
-        
+        height: 40%; 
+        .title{
+            font-family: sans-serif;
+            font-weight: 100;
+            padding: 0.6rem;
+        }
+        .price{
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1.3rem;
+            padding: 0.6rem;
+        }
+        .btn{
+            display: block;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            padding: 0.6rem;
+            font-family: sans-serif;
+            font-weight: bold;
+            color: #eee;
+            background: rgb(0, 0, 255);
+            border-radius: 4px;
+            user-select: none;
+            transition: transform 200ms ease-in, background 200ms ease-in , box-shadow 100ms linear;
+            &::before{
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: rgba(3, 96, 236, 0.637);
+                border-radius: 4px;
+                z-index: -1;
+            }
+            &:hover{
+                transform: scale(1.01, 1.01) translate(0, -1px);
+                //transform: translate(0, -1.5px); 
+                box-shadow: 0 1px 2px -1px rgb(0, 0, 0);
+                background: rgba(0, 0, 255, 0);
+            }
+        }
     }
 }
