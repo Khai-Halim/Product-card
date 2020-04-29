@@ -1,0 +1,1 @@
+This is a template for product cards for an online store.

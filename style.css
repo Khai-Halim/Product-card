@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+.mg-top {
+  margin-top: 1rem;
+}
+
+.mg-btm {
+  margin-bottom: 1rem;
+}
+
+.pd-top {
+  padding-top: 1rem;
+}
+
+.pd-btm {
+  padding-bottom: 1rem;
+}
+
+.card {
+  height: 30rem;
+  width: 18rem;
+}
+
+.card > :nth-child(1) {
+  height: 50%;
+  background-image: url(images/product-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12rem;
+}
+
+.card > :nth-child(2) {
+  height: 50%;
+}
+/*# sourceMappingURL=style.css.map */
