@@ -1,5 +1,5 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
-.container{max-width: 1000px; margin-left: auto; margin-right: auto;}
+.container{max-width: 1500px; margin-left: auto; margin-right: auto;}
 .wrapper{padding-left: 2rem; padding-right: 2rem; padding-bottom: 2rem;}
 @media (max-width: 767px){:root{font-size: 12px;}}
 .mg-top{margin-top: 1rem;}
@@ -9,13 +9,14 @@
 
 //Card
 .card{
-    height: 30rem;
-    width: 18rem;
+    height: 28rem;
+    width: 15rem;
     box-shadow: 1px 1px 2px 1px grey;
+    
 
     //Card Image
     >:nth-child(1){
-        height: 60%;
+        height: 55%;
         background-image: url(images/product-2.jpg);
         background-repeat: no-repeat;
         background-position: center;
@@ -24,8 +25,9 @@
 
     //Card Info
     >:nth-child(2){
-        height: 40%; 
+        height: 45%; 
         .title{
+            font-size: 0.9rem;
             font-family: sans-serif;
             font-weight: 100;
             padding: 0.6rem;
@@ -37,37 +39,45 @@
             font-size: 1.3rem;
             padding: 0.6rem;
         }
-        .btn{
-            display: block;
-            position: relative;
-            text-decoration: none;
-            text-align: center;
-            padding: 0.6rem;
-            font-family: sans-serif;
-            font-weight: bold;
-            color: #eee;
-            background: rgb(0, 0, 255);
-            border-radius: 4px;
-            user-select: none;
-            transition: transform 200ms ease-in, background 200ms ease-in , box-shadow 100ms linear;
-            &::before{
-                content: "";
-                display: block;
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-                background: rgba(3, 96, 236, 0.637);
-                border-radius: 4px;
-                z-index: -1;
-            }
-            &:hover{
-                transform: scale(1.01, 1.01) translate(0, -1px);
-                //transform: translate(0, -1.5px); 
-                box-shadow: 0 1px 2px -1px rgb(0, 0, 0);
-                background: rgba(0, 0, 255, 0);
-            }
-        }
+        
     }
 }
+
+.btn{  
+    //z-index: 99; //This z-index will cause this element to go behind the ::before element even though it is higher.
+    display: block;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.6rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #eee;
+    background-color: blue;
+    border-radius: 4px;
+    user-select: none;
+    transition: transform 200ms ease-in, background 300ms linear , box-shadow 100ms linear;
+    &:hover{
+        transform: scale(1.01, 1.01) translate(0, -1px);
+        transform: translate(0, -1.5px); 
+        box-shadow: 0 1px 2px -1px rgb(0, 0, 0);
+        background: rgb(59, 120, 250);
+    }
+}
+
+#card-container{
+    display: flex;
+}
+
+@media (max-width: 500px){
+    #card-container{
+        flex-direction: column;
+    } 
+
+    .card-box-two{
+        flex-direction: column;
+    }
+}
+
+
+
