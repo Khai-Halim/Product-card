@@ -11,14 +11,14 @@
 }
 
 .wrapper {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media (max-width: 767px) {
   :root {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -38,10 +38,20 @@
   padding-bottom: 1rem;
 }
 
+#card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: blue;
+}
+
 .card {
   height: 28rem;
   width: 15rem;
+  margin: 0.5rem;
   box-shadow: 1px 1px 2px 1px grey;
+  background: red;
+  flex: 1 15%;
 }
 
 .card > :nth-child(1) {
@@ -93,16 +103,30 @@
   background: #3b78fa;
 }
 
-#card-container {
-  display: flex;
+@media (max-width: 1400px) {
+  .card {
+    flex: 1 20%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .card {
+    flex: 1 27%;
+  }
+}
+
+@media (max-width: 767px) {
+  .card {
+    flex: 1 45%;
+  }
+  .wrapper {
+    padding: 0.2rem;
+  }
 }
 
 @media (max-width: 500px) {
-  #card-container {
-    flex-direction: column;
-  }
-  .card-box-two {
-    flex-direction: column;
+  .card {
+    margin: 0.2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
